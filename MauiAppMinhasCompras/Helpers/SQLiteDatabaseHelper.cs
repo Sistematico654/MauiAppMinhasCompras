@@ -15,12 +15,17 @@ namespace MauiAppMinhasCompras.Helpers
 
         public Task<int> insert(Produto p)  
         {
-            return _conn.InsertAsync(p); 
+            return _conn.InsertAsync(p);
         }
 
         public Task<int> Update(Produto p) 
         {
-            return _conn.UpdateAsync(p); 
+            // string sql = "UPDATE Produto SET Descricao=?, Quantidade=?, Preco=? WHERE Id=?";
+            // return _conn.QueryAsync<Produto>(
+            // sql, p.Descricao, p.Quantidade, p.Preco, p.Id
+            // );
+
+            return _conn.UpdateAsync(p);
         }
 
         public Task<int> delete(int id) 
